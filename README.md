@@ -6,7 +6,7 @@ To log the usage of Serium.
 
 # Installation
 
-To install this extension, clone the project from GitHub.
+## Cloning into yours
 
 ```
 cd ./path/to/your/project/.../extensions
@@ -21,7 +21,7 @@ Cloning into Serium-Extension-usageLogger...
 mv Serium-Extension-usageLogger usageLogger
 ```
 
-And the next step is registering the plugin.
+## Registering extension
 
 ```js
 // NOTE: file: ./extensions/index.js
@@ -32,4 +32,26 @@ const extensions = Object.values({
 module.exports.fetch = (client, message, options) => {
   extensions.forEach(extension => extension(client, message, options))
 }
+```
+
+```js
+// NOTE: file: ./index.js
+let assets = {
+  users: JSON.parse(fs.readFileSync('./assets/users.json', 'utf8')),
+  guilds: JSON.parse(fs.readFileSync('./assets/guilds.json', 'utf8')),
+
+  thirdparties: {
+    usageLogger: {
+      usage: JSON.parse(fs.readFileSync('./assets/thirdparties/usageLogger/usage.json', 'utf8'))
+    }
+  },
+
+  handle: data
+}
+```
+
+## Create file for logs
+
+```
+echo "{}" >> ./assets/thirdparties/usageLogger/usage.json
 ```
