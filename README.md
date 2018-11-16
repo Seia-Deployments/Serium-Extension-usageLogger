@@ -1,4 +1,4 @@
-# Serium-Extension-Logger
+# Serium-Extension-usageLogger
 
 ----
 
