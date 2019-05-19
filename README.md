@@ -1,8 +1,12 @@
 # Serium-Extension-usageLogger
 
-----
-
 To log the usage of Serium.
+
+**Deprecated Warning**
+
+This package won't work on latest version of Serium.
+
+----
 
 # Installation
 
